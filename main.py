@@ -40,7 +40,7 @@ optimizer = Adam(model, lr=learning_rate)
 loss_function = CrossEntropyLoss
 
 
-def test_model_accuracy(model, test_loader):
+def run_test_model_accuracy(model, test_loader):
     N = len(test_loader.dataset)
     correct = 0
     for images, labels in test_loader:
@@ -79,5 +79,5 @@ for epoch in range(epochs):
         loss.backward()
         optimizer.step()
 
-    accuracy = test_model_accuracy(model, test_loader)
+    accuracy = run_test_model_accuracy(model, test_loader)
     print(f'Epoch {epoch}, loss: {np.mean(loss_list if loss_list else [0])}, accuracy: {accuracy}%')

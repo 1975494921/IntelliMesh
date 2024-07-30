@@ -159,3 +159,6 @@ class Tensor:
         result.grad_fn = obj_operation
 
         return result
+
+    def view(self, shape):
+        return self.reshape(shape)

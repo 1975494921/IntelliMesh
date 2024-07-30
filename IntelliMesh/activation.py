@@ -87,9 +87,6 @@ def Tanh(x):
             if self.x.requires_grad:
                 self.x.backward(grad_input)
 
-    """
-    Applies the hyperbolic tangent activation function on each element of the input Tensor.
-    """
     if not isinstance(x, Tensor):
         raise ValueError("Tanh function requires a Tensor object as input.")
 
@@ -127,9 +124,6 @@ def Softmax(x):
             if self.x.requires_grad:
                 self.x.backward(grad_input)
 
-    """
-    Applies the softmax function on each element of the input Tensor, along the specified axis.
-    """
     if not isinstance(x, Tensor):
         raise ValueError("Softmax function requires a Tensor object as input.")
 
